@@ -5,9 +5,22 @@
         <field name="model">product.pricelist.item</field>
         <field name="inherit_id" ref="product.product_pricelist_item_form_view"/>
         <field name="arch" type="xml">
-            <!-- Inject right after the (invisible) date_end, so the two visible
-                 happy-hours fields appear directly below the "Validity Period"
-                 daterange widget, inside the pricelist_rule_limits group. -->
+            <field name="date_end" position="after">
+                <field name="start_hour"
+                       string="Happy Hours Start"
+                       widget="float_time"/>
+                <field name="end_hour"
+                       string="Happy Hours End"
+                       widget="float_time"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="happy_hours_pricelist_form_inherit" model="ir.ui.view">
+        <field name="name">product.pricelist.happy.hours.form</field>
+        <field name="model">product.pricelist</field>
+        <field name="inherit_id" ref="product.product_pricelist_view"/>
+        <field name="arch" type="xml">
             <field name="date_end" position="after">
                 <field name="start_hour"
                        string="Happy Hours Start"

@@ -31,7 +31,7 @@
         
         Compatibility
         -------------
-        * Odoo 19.0
+        * Odoo 17.0
         * Depends on ``point_of_sale``
         * Extends ``product.pricelist.item`` with two new fields: ``start_hour`` and ``end_hour``.
     """,
@@ -39,7 +39,7 @@
     'contributors': [
         'Moaz Elbahr <moazelbahr@gmail.com>',
     ],
-    'version': '18.0.1.0.0',
+    'version': '17.0.1.0.0',
     'depends': ['point_of_sale'],
     'data': [
         'views/product_pricelist_item_views.xml',

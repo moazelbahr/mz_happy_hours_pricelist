@@ -37,16 +37,6 @@ class ProductPricelistItem(models.Model):
             return start_m <= minutes < end_m
         return minutes >= start_m or minutes < end_m
 
-    def _load_pos_data_fields(self, config):
-        # Extend the field list shipped to the POS so the frontend can apply the
-        # recurring happy-hours window when selecting the best rule (see JS patch).
-        res = super()._load_pos_data_fields(config)
-        if 'start_hour' not in res:
-            res.append('start_hour')
-        if 'end_hour' not in res:
-            res.append('end_hour')
-        return res
-
     def _is_applicable_for(self, product, qty_in_product_uom):
         """Extend the applicability check with the recurring daily happy-hours window.
 
