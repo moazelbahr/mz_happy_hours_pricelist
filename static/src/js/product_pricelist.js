@@ -1,22 +1,11 @@
-import { ProductPricelist } from "@point_of_sale/app/models/product_pricelist";
+import { ProductProduct } from "@point_of_sale/app/models/product_product";
 import { patch } from "@web/core/utils/patch";
 
 const { DateTime } = luxon;
 
-patch(ProductPricelist.prototype, {
-    /**
-     * Extend the rule selection to honor the recurring-daily happy-hours window
-     * (start_hour / end_hour), configured on each pricelist item.
-     *
-     * Mirrors the backend `_is_applicable_for` override:
-     *   - both hours empty (0.0)  -> rule is always active (time dimension)
-     *   - start <= end            -> active when now is within [start, end[
-     *   - start > end             -> overnight window, active when now >= start or now < end
-     *
-     * Rules filtered out here are skipped, letting the next matching rule apply,
-     * exactly like an expired date_start/date_end validity period is skipped below.
-     */
-    findBestRule(rules, quantity) {
+patch(ProductProduct.prototype, {
+    getPricelistRule(pricelist, quantity) {
+        const rules = !pricelist ? [] : this.cachedPricelistRules[pricelist?.id] || [];
         const now = DateTime.now();
         const minutes = now.hour * 60 + now.minute;
         const filtered = rules.filter((rule) => {
@@ -38,6 +27,6 @@ patch(ProductPricelist.prototype, {
             }
             return true;
         });
-        return super.findBestRule(filtered, quantity);
+        return filtered.find((rule) => !rule.min_quantity || quantity >= rule.min_quantity);
     },
 });
