@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MZ Happy Hours Pricelist</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; line-height: 1.6; color: #2D3748; background-color: #ffffff;">
+
+<div style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+
+    <!-- ===================================================== Header -->
+    <div style="background-color: #ffffff; padding: 40px 0 20px; text-align: center; border-bottom: 1px solid #e5e7eb;">
+        <h1 style="font-size: 28px; font-weight: 600; color: #0a1f44; margin: 0 0 10px; line-height: 1.3;">
+            MZ <span style="color: #d4af37;">Happy Hours</span> Pricelist
+        </h1>
+        <p style="font-size: 18px; color: #0a1f44; font-weight: 600; margin: 0 0 30px;">
+            Recurring daily time windows for Odoo pricelist rules &mdash; backend to Point of Sale.
+        </p>
+        <div style="display: inline-block; background-color: #f6f7fb; padding: 10px 20px; border-radius: 999px; margin: 0 0 10px;">
+            <span style="font-size: 13px; color: #0a1f44; font-weight: 600;">Version: 19.0.1.0.0</span>
+            <span style="color: #d4af37; margin: 0 12px;">|</span>
+            <span style="font-size: 13px; color: #0a1f44; font-weight: 600;">Author: MZ Apps</span>
+            <span style="color: #d4af37; margin: 0 12px;">|</span>
+            <span style="font-size: 13px; color: #0a1f44; font-weight: 600;">License: LGPL-3</span>
+        </div>
+        <div style="margin-top: 16px;">
+            <span style="display: inline-block; background-color: #fff8e6; border: 1px solid #d4af37; color: #b8902a; padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 600; margin: 4px;">Odoo 19 Ready</span>
+            <span style="display: inline-block; background-color: #fff8e6; border: 1px solid #d4af37; color: #b8902a; padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 600; margin: 4px;">POS Compatible</span>
+            <span style="display: inline-block; background-color: #fff8e6; border: 1px solid #d4af37; color: #b8902a; padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 600; margin: 4px;">Timezone Aware</span>
+        </div>
+    </div>
+
+    <!-- ===================================================== Hero -->
+    <div style="padding: 0; margin: 40px 0;">
+        <p style="font-size: 18px; color: #2D3748; text-align: left; margin: 0 auto 30px; line-height: 1.7;">
+            Add recurring daily time windows to any Odoo pricelist rule. Define a
+            <strong>Happy Hours Start</strong> and <strong>Happy Hours End</strong>
+            and the rule only applies during that window every day &mdash; in the
+            backend and in the Point of Sale.
+        </p>
+        <div style="background-color: #0a1f44; border-radius: 16px; padding: 40px; margin: 30px 0; text-align: center;">
+            <p style="font-size: 20px; font-weight: 700; color: #d4af37; margin: 0 0 10px;">
+                &#9201; Daily happy hours. Every day. Automatically.
+            </p>
+            <p style="font-size: 15px; color: #c6cee0; margin: 0; line-height: 1.7;">
+                Supports overnight windows (22:00 &rarr; 02:00), user timezone,
+                and falls back to the next matching rule when outside the window.
+            </p>
+        </div>
+    </div>
+
+    <!-- ===================================================== Overview -->
+    <h2 style="font-size: 32px; font-weight: 700; color: #0a1f44; margin: 60px 0 30px;">What is <span style="color: #d4af37;">MZ Happy Hours Pricelist</span>?</h2>
+    <p style="font-size: 16px; color: #2D3748; line-height: 1.8; margin-bottom: 30px; margin-top: 0;">
+        Odoo's built-in pricelists let you set date validity periods, but not
+        <strong>recurring daily</strong> time windows. This module adds two simple
+        fields &mdash; <em>Happy Hours Start</em> and <em>Happy Hours End</em> &mdash;
+        to every pricelist item. A rule outside its time window is skipped and the
+        next matching rule applies, just like an expired date validity period.
+    </p>
+
+    <div style="display: table; width: 100%; margin: 40px 0;">
+        <div style="display: table-row;">
+            <div style="display: table-cell; width: 50%; padding-right: 15px; vertical-align: top;">
+                <p style="font-size: 16px; color: #2D3748; line-height: 1.8; margin-bottom: 18px; margin-top: 0;">
+                    Perfect for bars, restaurants, retail stores, or any business
+                    where pricing changes depending on the time of day.
+                </p>
+                <ul style="color: #2D3748; line-height: 1.8; margin: 0; padding-left: 20px; font-size: 15px;">
+                    <li>No need to duplicate rules every day.</li>
+                    <li>Overnight windows wrap past midnight.</li>
+                    <li>Respects the user's configured timezone.</li>
+                    <li>Leave both fields empty to keep the rule always active.</li>
+                    <li>Works in backend and POS, identically.</li>
+                </ul>
+            </div>
+            <div style="display: table-cell; width: 50%; padding-left: 15px; vertical-align: top;">
+                <div style="background-color: #0a1f44; color: #ffffff; border-radius: 16px; padding: 28px;">
+                    <h3 style="font-size: 18px; color: #d4af37; margin: 0 0 18px;">The problem, solved</h3>
+                    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding: 10px 0; font-size: 14px; color: #c6cee0;">
+                        &#10003; Recurring windows, configured once
+                    </div>
+                    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding: 10px 0; font-size: 14px; color: #c6cee0;">
+                        &#10003; Same window repeats 365 days/year
+                    </div>
+                    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding: 10px 0; font-size: 14px; color: #c6cee0;">
+                        &#10003; POS JavaScript patch included
+                    </div>
+                    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding: 10px 0; font-size: 14px; color: #c6cee0;">
+                        &#10003; Native Odoo pricelist semantics
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================================================== How It Works -->
+    <h2 style="font-size: 32px; font-weight: 700; color: #0a1f44; margin: 60px 0 30px;">How It <span style="color: #d4af37;">Works</span></h2>
+    <p style="font-size: 16px; color: #2D3748; line-height: 1.8; margin-bottom: 40px; margin-top: 0;">
+        Four simple steps. No extra configuration screen, no new model &mdash;
+        just two new fields on the standard pricelist item form.
+    </p>
+
+    <div style="display: table; width: 100%; margin: 40px 0;">
+        <div style="display: table-row;">
+            <div style="display: table-cell; width: 25%; padding: 0 8px; vertical-align: top;">
+                <div style="background-color: #fff8e6; padding: 25px; border-radius: 16px; text-align: center; height: 190px; box-sizing: border-box; border: 1px solid #f0d78c;">
+                    <div style="background-color: #0a1f44; color: #d4af37; width: 40px; height: 40px; border-radius: 50%; line-height: 40px; font-weight: 700; margin: 0 auto 15px;">1</div>
+                    <h4 style="font-size: 15px; font-weight: 600; color: #0a1f44; margin: 0 0 8px;">Open a Pricelist Item</h4>
+                    <p style="font-size: 13px; color: #2D3748; line-height: 1.5; margin: 0;">Go to Sales/Point Of Sale &rarr; Pricelists and open any rule.</p>
+                </div>
+            </div>
+            <div style="display: table-cell; width: 25%; padding: 0 8px; vertical-align: top;">
+                <div style="background-color: #fff8e6; padding: 25px; border-radius: 16px; text-align: center; height: 190px; box-sizing: border-box; border: 1px solid #f0d78c;">
+                    <div style="background-color: #0a1f44; color: #d4af37; width: 40px; height: 40px; border-radius: 50%; line-height: 40px; font-weight: 700; margin: 0 auto 15px;">2</div>
+                    <h4 style="font-size: 15px; font-weight: 600; color: #0a1f44; margin: 0 0 8px;">Set the Window</h4>
+                    <p style="font-size: 13px; color: #2D3748; line-height: 1.5; margin: 0;">Enter Happy Hours Start and End with the float-time widget.</p>
+                </div>
+            </div>
+            <div style="display: table-cell; width: 25%; padding: 0 8px; vertical-align: top;">
+                <div style="background-color: #fff8e6; padding: 25px; border-radius: 16px; text-align: center; height: 190px; box-sizing: border-box; border: 1px solid #f0d78c;">
+                    <div style="background-color: #0a1f44; color: #d4af37; width: 40px; height: 40px; border-radius: 50%; line-height: 40px; font-weight: 700; margin: 0 auto 15px;">3</div>
+                    <h4 style="font-size: 15px; font-weight: 600; color: #0a1f44; margin: 0 0 8px;">(Optional) Leave Empty</h4>
+                    <p style="font-size: 13px; color: #2D3748; line-height: 1.5; margin: 0;">Empty fields mean the rule is always active.</p>
+                </div>
+            </div>
+            <div style="display: table-cell; width: 25%; padding: 0 8px; vertical-align: top;">
+                <div style="background-color: #fff8e6; padding: 25px; border-radius: 16px; text-align: center; height: 190px; box-sizing: border-box; border: 1px solid #f0d78c;">
+                    <div style="background-color: #0a1f44; color: #d4af37; width: 40px; height: 40px; border-radius: 50%; line-height: 40px; font-weight: 700; margin: 0 auto 15px;">4</div>
+                    <h4 style="font-size: 15px; font-weight: 600; color: #0a1f44; margin: 0 0 8px;">It Just Works</h4>
+                    <p style="font-size: 13px; color: #2D3748; line-height: 1.5; margin: 0;">Rules outside the window are skipped; the next rule applies.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================================================== Screenshots -->
+    <h2 style="font-size: 32px; font-weight: 700; color: #0a1f44; margin: 60px 0 30px;">Screenshots &amp; <span style="color: #d4af37;">Demo</span></h2>
+    <p style="font-size: 16px; color: #2D3748; line-height: 1.8; margin-bottom: 40px; margin-top: 0;">
+        A visual tour of the module in action. To add more screenshots, copy the block
+        below with the comment marker and update the title, description, and image path.
+    </p>
+
+    <!--
+    ===============================================================================
+    SCREENSHOT BLOCK - COPY-PASTE TEMPLATE
+
+    Copy everything from " <div style=\"margin: 0 auto 60px; ... \"> " to its
+    closing " </div> " and paste it below the latest screenshot. Then change:
+      - The big title between <h3> ... </h3>
+      - The small description between <p> ... </p>
+      - The src="Screenshots/YOUR_FILE.png"
+    ============================================================================= -->
+
+    <div style="margin: 0 auto 60px; max-width: 760px; text-align: center;">
+        <h3 style="font-size: 22px; font-weight: 700; color: #0a1f44; margin: 0 0 10px;">
+            <span style="color: #d4af37;">&#128194;</span> Pricelist Item &mdash; Happy Hours Fields
+        </h3>
+        <p style="font-size: 15px; color: #2D3748; line-height: 1.7; margin: 0 auto 24px; max-width: 680px;">
+            Choose <em>Happy Hours Start</em> & <em>Happy Hours End</em> through the pricelist item.
+        </p>
+        <div style="background-color: #ffffff; border-radius: 16px; padding: 14px; border: 1px solid #e2e8f0;">
+            <img src="Screenshots/image.png" alt="Pricelist item form showing Happy Hours Start and End fields" style="width: 100%; height: auto; display: block; border-radius: 8px;">
+        </div>
+    </div>
+
+    <div style="margin: 0 auto 60px; max-width: 760px; text-align: center;">
+        <h3 style="font-size: 22px; font-weight: 700; color: #0a1f44; margin: 0 0 10px;">
+            Product Real Sales Price
+        </h3>
+        <p style="font-size: 15px; color: #2D3748; line-height: 1.7; margin: 0 auto 24px; max-width: 680px;">
+            Product <em>Apple Pie</em> has a sales price of <em><strong>12$</strong></em> without pricelist
+        </p>
+        <div style="background-color: #ffffff; border-radius: 16px; padding: 14px; border: 1px solid #e2e8f0;">
+            <img src="Screenshots/image2.png" alt="Overnight happy-hours window configuration" style="width: 100%; height: auto; display: block; border-radius: 8px;">
+        </div>
+    </div>
+
+    <div style="margin: 0 auto 60px; max-width: 760px; text-align: center;">
+        <h3 style="font-size: 22px; font-weight: 700; color: #0a1f44; margin: 0 0 10px;">
+            Add Pricelist To POS
+        </h3>
+        <p style="font-size: 15px; color: #2D3748; line-height: 1.7; margin: 0 auto 24px; max-width: 680px;">
+            Go To <strong>POS > Configuration > Settings</strong> and enable <em>Flexible Pricelists</em> and add you pricelist.
+        </p>
+        <div style="background-color: #ffffff; border-radius: 16px; padding: 14px; border: 1px solid #e2e8f0;">
+            <img src="Screenshots/image3.png" alt="Point of Sale showing happy-hours pricing" style="width: 100%; height: auto; display: block; border-radius: 8px;">
+        </div>
+    </div>
+
+    <div style="margin: 0 auto 60px; max-width: 760px; text-align: center;">
+        <h3 style="font-size: 22px; font-weight: 700; color: #0a1f44; margin: 0 0 10px;">
+            In POS Session
+        </h3>
+        <p style="font-size: 15px; color: #2D3748; line-height: 1.7; margin: 0 auto 24px; max-width: 680px;">
+            Open the <em>POS Session</em> containing the product and selet it withing the time of the <em>Happy Hours</em> and notice it's <strong>50$</strong> as in the pricelist.
+        </p>
+        <div style="background-color: #ffffff; border-radius: 16px; padding: 14px; border: 1px solid #e2e8f0;">
+            <img src="Screenshots/image4.png" alt="Point of Sale showing happy-hours pricing" style="width: 100%; height: auto; display: block; border-radius: 8px;">
+        </div>
+    </div>
+
+    <div style="margin: 0 auto 60px; max-width: 760px; text-align: center;">
+        <h3 style="font-size: 22px; font-weight: 700; color: #0a1f44; margin: 0 0 10px;">
+            In Sales Order/Quotation
+        </h3>
+        <p style="font-size: 15px; color: #2D3748; line-height: 1.7; margin: 0 auto 24px; max-width: 680px;">
+            Choose the product in <em>Sales Order/Quotation</em> within the time of the <em>Happy Hours</em> and notice it's <strong>50$</strong> as in the pricelist.
+        </p>
+        <div style="background-color: #ffffff; border-radius: 16px; padding: 14px; border: 1px solid #e2e8f0;">
+            <img src="Screenshots/image5.png" alt="Point of Sale showing happy-hours pricing" style="width: 100%; height: auto; display: block; border-radius: 8px;">
+        </div>
+    </div>
+
+    <div style="margin: 0 auto 60px; max-width: 760px; text-align: center;">
+        <h3 style="font-size: 22px; font-weight: 700; color: #0a1f44; margin: 0 0 10px;">
+            Change Happy Hours Duration
+        </h3>
+        <p style="font-size: 15px; color: #2D3748; line-height: 1.7; margin: 0 auto 24px; max-width: 680px;">
+            Change Happy Hours to a different time
+        </p>
+        <div style="background-color: #ffffff; border-radius: 16px; padding: 14px; border: 1px solid #e2e8f0;">
+            <img src="Screenshots/image6.png" alt="Point of Sale showing happy-hours pricing" style="width: 100%; height: auto; display: block; border-radius: 8px;">
+        </div>
+    </div>
+
+    <div style="margin: 0 auto 60px; max-width: 760px; text-align: center;">
+        <h3 style="font-size: 22px; font-weight: 700; color: #0a1f44; margin: 0 0 10px;">
+            In POS Session
+        </h3>
+        <p style="font-size: 15px; color: #2D3748; line-height: 1.7; margin: 0 auto 24px; max-width: 680px;">
+            Notice the price of the product In <em>POS Session</em> returns to the product <em>Sales Price</em>.
+        </p>
+        <div style="background-color: #ffffff; border-radius: 16px; padding: 14px; border: 1px solid #e2e8f0;">
+            <img src="Screenshots/image7.png" alt="Point of Sale showing happy-hours pricing" style="width: 100%; height: auto; display: block; border-radius: 8px;">
+        </div>
+    </div>
+
+    <div style="margin: 0 auto 60px; max-width: 760px; text-align: center;">
+        <h3 style="font-size: 22px; font-weight: 700; color: #0a1f44; margin: 0 0 10px;">
+            In Sales Order
+        </h3>
+        <p style="font-size: 15px; color: #2D3748; line-height: 1.7; margin: 0 auto 24px; max-width: 680px;">
+            Notice the price of the product In <em>Sales Order/Qutoation</em> returns to the product <em>Sales Price</em>.
+        </p>
+        <div style="background-color: #ffffff; border-radius: 16px; padding: 14px; border: 1px solid #e2e8f0;">
+            <img src="Screenshots/image8.png" alt="Point of Sale showing happy-hours pricing" style="width: 100%; height: auto; display: block; border-radius: 8px;">
+        </div>
+    </div>
+
+    <!-- Add more screenshot blocks above this comment -->
+
+    <!-- ===================================================== Technical / Module Details -->
+    <h2 style="font-size: 32px; font-weight: 700; color: #0a1f44; margin: 60px 0 30px;">Module <span style="color: #d4af37;">Details</span></h2>
+
+    <div style="display: table; width: 100%; margin: 40px 0;">
+        <div style="display: table-row;">
+            <div style="display: table-cell; width: 50%; padding-right: 15px; vertical-align: top;">
+                <div style="background-color: #f8fafc; padding: 28px; border-radius: 16px; border: 1px solid #e2e8f0;">
+                    <h4 style="font-size: 17px; font-weight: 600; color: #0a1f44; margin: 0 0 15px;">General Info</h4>
+                    <div style="font-size: 14px; color: #2D3748; line-height: 1.8; border-top: 1px solid #e2e8f0; padding: 8px 0;"><strong>Version:</strong> 19.0.1.0.0</div>
+                    <div style="font-size: 14px; color: #2D3748; line-height: 1.8; border-top: 1px solid #e2e8f0; padding: 8px 0;"><strong>Author:</strong> MZ Apps</div>
+                    <div style="font-size: 14px; color: #2D3748; line-height: 1.8; border-top: 1px solid #e2e8f0; padding: 8px 0;"><strong>License:</strong> LGPL-3</div>
+                    <div style="font-size: 14px; color: #2D3748; line-height: 1.8; border-top: 1px solid #e2e8f0; padding: 8px 0;"><strong>Depends on:</strong> point_of_sale</div>
+                </div>
+            </div>
+            <div style="display: table-cell; width: 50%; padding-left: 15px; vertical-align: top;">
+                <div style="background-color: #f8fafc; padding: 28px; border-radius: 16px; border: 1px solid #e2e8f0;">
+                    <h4 style="font-size: 17px; font-weight: 600; color: #0a1f44; margin: 0 0 15px;">What is Extended</h4>
+                    <div style="font-size: 14px; color: #2D3748; line-height: 1.8; border-top: 1px solid #e2e8f0; padding: 8px 0;"><strong>Model:</strong> product.pricelist.item</div>
+                    <div style="font-size: 14px; color: #2D3748; line-height: 1.8; border-top: 1px solid #e2e8f0; padding: 8px 0;"><strong>Fields:</strong> start_hour, end_hour</div>
+                    <div style="font-size: 14px; color: #2D3748; line-height: 1.8; border-top: 1px solid #e2e8f0; padding: 8px 0;"><strong>POS asset:</strong> product_pricelist.js</div>
+                    <div style="font-size: 14px; color: #2D3748; line-height: 1.8; border-top: 1px solid #e2e8f0; padding: 8px 0;"><strong>Key methods:</strong> _is_in_happy_hours, _is_applicable_for, findBestRule</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================================================== Features -->
+    <h2 style="font-size: 32px; font-weight: 700; color: #0a1f44; margin: 60px 0 30px;">Features</h2>
+    <p style="font-size: 16px; color: #2D3748; line-height: 1.8; margin-bottom: 30px; margin-top: 0;">
+        A quick overview of everything MZ Happy Hours Pricelist brings to your Odoo setup.
+    </p>
+
+    <!--
+    ===============================================================================
+    FEATURE ITEM - COPY-PASTE TEMPLATE
+
+    Copy the block below and paste it above the "Add more features above this comment"
+    line, then replace the sentence between the second <span> ... </span>.
+    ============================================================================= -->
+
+    <div style="background-color: #f8fafc; padding: 30px; border-radius: 16px; border: 1px solid #e2e8f0;">
+        <div style="margin-bottom: 12px;">
+            <span style="color: #d4af37; font-size: 18px; margin-right: 12px; display: inline-block; width: 24px; text-align: center;">&#9733;</span>
+            <span style="font-size: 15px; color: #2D3748; line-height: 1.7;">Recurring daily happy-hours windows on every pricelist item.</span>
+        </div>
+        <div style="margin-bottom: 12px;">
+            <span style="color: #d4af37; font-size: 18px; margin-right: 12px; display: inline-block; width: 24px; text-align: center;">&#9733;</span>
+            <span style="font-size: 15px; color: #2D3748; line-height: 1.7;">Overnight window support that wraps correctly past midnight.</span>
+        </div>
+        <div style="margin-bottom: 12px;">
+            <span style="color: #d4af37; font-size: 18px; margin-right: 12px; display: inline-block; width: 24px; text-align: center;">&#9733;</span>
+            <span style="font-size: 15px; color: #2D3748; line-height: 1.7;">Works in both the Odoo backend and the Point of Sale.</span>
+        </div>
+        <div style="margin-bottom: 12px;">
+            <span style="color: #d4af37; font-size: 18px; margin-right: 12px; display: inline-block; width: 24px; text-align: center;">&#9733;</span>
+            <span style="font-size: 15px; color: #2D3748; line-height: 1.7;">Timezone-aware evaluation using the user's configured timezone.</span>
+        </div>
+        <div style="margin-bottom: 12px;">
+            <span style="color: #d4af37; font-size: 18px; margin-right: 12px; display: inline-block; width: 24px; text-align: center;">&#9733;</span>
+            <span style="font-size: 15px; color: #2D3748; line-height: 1.7;">Backward compatible: empty hours keep rules always active.</span>
+        </div>
+        <div style="margin-bottom: 12px;">
+            <span style="color: #d4af37; font-size: 18px; margin-right: 12px; display: inline-block; width: 24px; text-align: center;">&#9733;</span>
+            <span style="font-size: 15px; color: #2D3748; line-height: 1.7;">Follows native Odoo pricelist fall-through semantics.</span>
+        </div>
+        <div style="margin-bottom: 12px;">
+            <span style="color: #d4af37; font-size: 18px; margin-right: 12px; display: inline-block; width: 24px; text-align: center;">&#9733;</span>
+            <span style="font-size: 15px; color: #2D3748; line-height: 1.7;">Simple float-time input fields below the Validity Period.</span>
+        </div>
+        <div style="margin-bottom: 12px;">
+            <span style="color: #d4af37; font-size: 18px; margin-right: 12px; display: inline-block; width: 24px; text-align: center;">&#9733;</span>
+            <span style="font-size: 15px; color: #2D3748; line-height: 1.7;">No extra configuration screens or new models required.</span>
+        </div>
+
+        <!-- Add more feature items above this comment -->
+    </div>
+
+    <!-- ===================================================== Footer CTA -->
+    <div style="border: 2px solid #0a1f44; color: #2D3748; padding: 40px; border-radius: 16px; text-align: center; margin: 60px 0 40px;">
+        <h2 style="font-size: 24px; font-weight: 700; margin: 0 0 14px; color: #0a1f44;">Ready to bring happy hours to your pricelists?</h2>
+        <p style="font-size: 16px; line-height: 1.7; margin: 0 0 20px;">
+            Install MZ Happy Hours Pricelist and start using recurring daily time windows today.
+        </p>
+        <p style="font-size: 14px; margin: 0; color: #5a6881;">
+            For support, contact <a href="mailto:moazelbahr@gmail.com" style="color: #b8902a; font-weight: 600;">moazelbahr@gmail.com</a>.
+        </p>
+    </div>
+
+</div>
+
+<!-- ===================================================== Brand Footer -->
+<div style="background-color: #0a1f44; color: #c6cee0; padding: 40px 24px 30px; text-align: center;">
+    <div style="max-width: 900px; margin: 0 auto;">
+        <h3 style="color: #d4af37; font-size: 20px; margin: 0 0 12px;">MZ Apps</h3>
+        <p style="font-size: 14px; line-height: 1.6; margin: 0 0 8px;">
+            Crafting focused Odoo modules that extend the platform with practical,
+            native-feeling features.
+        </p>
+        <p style="font-size: 13px; color: #8a96b3; margin: 0;">
+            &copy; 2026 MZ Apps. All rights reserved. Odoo&trade; is a trademark of Odoo S.A.
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
