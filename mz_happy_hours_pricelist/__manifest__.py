@@ -50,7 +50,7 @@
         ],
     },
     'images': [
-        'static/description/icon.png',
+        'static/description/banner.png',
     ],
     'application': True,
     'installable': True,
