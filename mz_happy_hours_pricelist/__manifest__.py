@@ -49,6 +49,9 @@
             'mz_happy_hours_pricelist/static/src/js/product_pricelist.js',
         ],
     },
+    'images': [
+        'static/description/banner.png',
+    ],
     'application': True,
     'installable': True,
     'auto_install': False,
